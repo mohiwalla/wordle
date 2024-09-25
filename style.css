@@ -1,0 +1,37 @@
+* {
+    font-family: "Inter", sans-serif;
+}
+
+h1 {
+    font-family: "Edu AU VIC WA NT Dots", cursive;
+}
+
+.error-shake {
+    animation: error-shake 0.5s ease-in forwards;
+}
+
+@keyframes error-shake {
+    15% {
+        transform: translateX(-10px);
+    }
+
+    30% {
+        transform: translateX(10px);
+    }
+
+    45% {
+        transform: translateX(-8px);
+    }
+
+    60% {
+        transform: translateX(8px);
+    }
+
+    75% {
+        transform: translateX(-5px);
+    }
+
+    90% {
+        transform: translateX(5px);
+    }
+}
