@@ -1,5 +1,6 @@
 * {
     font-family: "Inter", sans-serif;
+    transition: background-color 200ms;
 }
 
 h1 {
@@ -7,7 +8,17 @@ h1 {
 }
 
 .error-shake {
-    animation: error-shake 0.5s ease-in forwards;
+    animation: error-shake 500ms ease-in forwards !important;
+}
+
+.jump-zoom {
+    animation: jump-zoom 200ms;
+}
+
+@keyframes jump-zoom {
+    30% {
+        transform: scale(1.1);
+    }
 }
 
 @keyframes error-shake {
@@ -34,4 +45,16 @@ h1 {
     90% {
         transform: translateX(5px);
     }
+}
+
+.corret-letter-correct-position {
+    background-color: #00ff0080;
+}
+
+.corret-letter-wrong-position {
+    background-color: #ffff0080;
+}
+
+.wrong-letter-wrong-position {
+    background-color: #80808080;
 }
