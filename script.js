@@ -2,7 +2,13 @@ const dictionary = ["aalii", "aalst", "aalto", "aarau", "aaron", "aarti", "abaca
 const words = ["actor", "alarm", "alien", "angel", "anger", "apple", "award", "beach", "beard", "birth", "block", "blood", "board", "brain", "bread", "break", "brick", "brush", "buddy", "cable", "chair", "chalk", "charm", "cheek", "child", "claim", "clock", "cloud", "couch", "craft", "cream", "crown", "dance", "death", "delay", "depth", "dream", "dress", "earth", "enemy", "event", "faith", "field", "flame", "floor", "frame", "fruit", "glass", "globe", "glove", "grape", "grass", "group", "heart", "honey", "horse", "house", "image", "input", "islam", "jewel", "knife", "labor", "laser", "laugh", "level", "light", "loose", "money", "mouth", "music", "night", "noise", "ocean", "olive", "onion", "paint", "party", "piano", "plane", "plant", "power", "price", "queen", "radio", "river", "salad", "scarf", "shape", "shirt", "shock", "sleep", "smile", "smoke", "snake", "space", "spoon", "stone", "store", "storm", "table", "tiger", "title", "toast", "train", "truck", "trust", "uncle", "union", "value", "video", "voice", "water", "woman", "world", "wrist", "zebra"]
 const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z', 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z']
 
-const secretWord = words[Math.floor(Math.random() * words.length)]
+let secretWord
+if (new URL(location.href).searchParams.get("custom")) {
+    secretWord = prompt("Enter a 5 letter secret word.") ?? words[Math.floor(Math.random() * words.length)]
+} else {
+    secretWord = words[Math.floor(Math.random() * words.length)]
+}
+
 const previousAttempts = []
 const maxAttempts = 5
 const wordsLength = 5

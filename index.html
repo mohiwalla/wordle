@@ -1,29 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script src="https://cdn.tailwindcss.com"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="style.css" />
+		<title>Wordle</title>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Dots:wght@400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <title>Wordle</title>
-</head>
+	<body class="bg-black h-screen select-none py-10">
+		<div class="flex gap-5 justify-center text-white items-center mb-10">
+			<h1 class="text-6xl font-black">Wordle</h1>
+			<!-- <button class="border size-8 font-bold hover:bg-slate-800 transition-all duration-100 rounded-full">?</button> -->
+		</div>
 
-<body class="bg-black h-screen select-none py-10">
-    <div class="flex gap-5 justify-center text-white items-center mb-10">
-        <h1 class="text-6xl font-black">Wordle</h1>
-        <!-- <button class="border size-8 font-bold hover:bg-slate-800 transition-all duration-100 rounded-full">?</button> -->
-    </div>
+		<div
+			class="grid grid-cols-5 grid-rows-5 text-white place-items-center w-fit gap-5 mx-auto"
+			id="wordsContainer"
+		></div>
 
-    <div class="grid grid-cols-5 grid-rows-5 text-white place-items-center w-fit gap-5 mx-auto" id="wordsContainer">
-    </div>
-
-    <script src="script.js"></script>
-    <!-- <script src="script-api.js"></script> -->
-</body>
-
+		<script src="script.js"></script>
+		<!-- <script src="script-api.js"></script> -->
+	</body>
 </html>
