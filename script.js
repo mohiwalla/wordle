@@ -10,7 +10,7 @@ if (new URL(location.href).searchParams.get("custom")) {
 }
 
 const previousAttempts = []
-const maxAttempts = 5
+const maxAttempts = 6
 const wordsLength = 5
 
 const wordsContainer = document.getElementById("wordsContainer")
